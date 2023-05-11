@@ -1,0 +1,44 @@
+--Create a grocery store database with price, number of iteams and number of product sold in this order
+/** Store :
+Cheese (1.81) (70) (54)
+Milk (3.99) (65) (53)
+Apples (2.99) (76) (62)
+Cookies (4.99) (52) (43)
+Bacon (2.99) (42) (27)
+Bread (4.99) (87) (56)
+Coffee (7.99) (93) (59)
+Candy (.99) (71) (63)
+Mangos (3.99) (64) (55)
+Butter (2.99) (53) (47)
+Paper Plates (1.99) (42) (28)
+Styrofoam Cups (1.99) (60) (52)
+Plastic Silverware (2.99) (60) (43)
+Napkins (2.51) (62) (45)
+Toliet Paper (10.99) (47) (31)
+**/
+
+CREATE TABLE Store (Shelf INTEGER PRIMARY KEY, Iteam TEXT, Price INTEGER, Quantity INTEGER, Amount_Sold INTEGER, Profit_Made INTEGER, Profit_Loss INTEGER);
+
+INSERT INTO Store VALUES (1, "Cheese", 1.81, 70, 54, 97.74, 28.96);
+INSERT INTO Store Values (2, "Milk", 3.99, 65, 53, 211.47, 47.88);
+INSERT INTO Store Values (3, "Apples", 2.99, 76, 62, 185.38, 47.87);
+INSERT INTO Store Values (4, "Cookies", 4.99, 52, 43, 214.57, 44.91);
+INSERT INTO Store Values (5, "Bacon", 2.99, 42, 27, 80.73, 44.85);
+INSERT INTO Store Values (6, "Bread", 4.99, 87, 56, 279.44, 154.69);
+INSERT INTO Store Values (7, "Coffee", 7.99, 93, 59, 471.41, 271.66);
+INSERT INTO Store Values (8, "Candy", .99, 71, 63, 62.37, 7.92);
+INSERT INTO Store Values (9, "Mangos", 3.99, 64, 55, 219.45, 35.91);
+INSERT INTO Store Values (10, "Butter", 2.99, 53, 47, 140.53, 17.94);
+INSERT INTO Store Values (11, "Paper Plates", 1.99, 42, 28, 55.72, 27.86);
+INSERT INTO Store Values (12, "Styrofoam Cups", 2.99, 60, 52, 155.48, 23.92);
+INSERT INTO Store Values (13, "Plastic Silverware", 2.99, 60, 43, 128.57, 50.83);
+INSERT INTO Store Values (14, "Napkins", 2.51, 62, 45, 112.95, 42.67);
+INSERT INTO Store Values (15, "Toliet Paper", 10.99, 47, 31, 340.69, 175.84);
+
+--display the database by income earned.
+SELECT * FROM Store;
+SELECT SUM(Profit_Made) FROM Store;
+
+--display the database by income lost.
+SELECT * FROM Store;
+SELECT SUM(Profit_Loss) FROM Store;
