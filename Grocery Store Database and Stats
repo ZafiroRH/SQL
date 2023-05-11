@@ -1,4 +1,5 @@
 --Create a grocery store database with price, number of iteams and number of product sold in this order
+
 /** Store :
 Cheese (1.81) (70) (54)
 Milk (3.99) (65) (53)
@@ -34,11 +35,13 @@ INSERT INTO Store Values (12, "Styrofoam Cups", 2.99, 60, 52, 155.48, 23.92);
 INSERT INTO Store Values (13, "Plastic Silverware", 2.99, 60, 43, 128.57, 50.83);
 INSERT INTO Store Values (14, "Napkins", 2.51, 62, 45, 112.95, 42.67);
 INSERT INTO Store Values (15, "Toliet Paper", 10.99, 47, 31, 340.69, 175.84);
+SELECT * FROM Store;
 
 --display the database by income earned.
-SELECT * FROM Store;
+
 SELECT SUM(Profit_Made) FROM Store;
 
+
 --display the database by income lost.
-SELECT * FROM Store;
+
 SELECT SUM(Profit_Loss) FROM Store;
